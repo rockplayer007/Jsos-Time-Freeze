@@ -1,0 +1,20 @@
+  {
+    "name": "Jsos Time Freeze",
+    "version": "1.0",
+    "description": "Allows to stop the Jsos countdown, and therefor not showing popups to redirect elsewhere",
+
+    "content_scripts": [
+		{
+			"matches": ["*://jsos.pwr.edu.pl/index.php/student/*"],
+			"js": ["./content.js"],
+			"run_at": "document_end"
+		}
+	],
+    "manifest_version": 2,
+	"web_accessible_resources": ["background.js"],
+
+	"permissions": [
+	    "tabs",
+	    "*://jsos.pwr.edu.pl/index.php/student/*"
+  	]
+  }
